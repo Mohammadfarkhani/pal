@@ -1,0 +1,214 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  font-family: "vazir";
+}
+
+body {
+  font-family: "vazir";
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+}
+.head nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 85%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.head nav .logo {
+  background-image: url(../image/logo.png);
+  background-size: cover;
+  width: 145px;
+  height: 55px;
+}
+.head nav .toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.head nav .toggle-button .bar {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.head nav .navbar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.head nav .navbar ul li {
+  justify-content: center;
+  text-align: center;
+}
+.head nav .navbar ul li a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-family: "vazir";
+  font-size: 15px;
+  font: 500 normal 13px "vazir";
+  padding: 5px;
+  margin-left: 15px;
+}
+.head nav .navbar ul .button {
+  color: #1e3d77;
+  font-family: "vazir";
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 10px;
+  background-color: rgb(0, 250, 250);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+}
+.head nav .navbar ul .button:hover {
+  background-color: burlywood;
+}
+
+@media (max-width: 768px) {
+  .head nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .head nav .toggle-button {
+    display: flex;
+  }
+  .head nav .navbar.active {
+    display: flex;
+  }
+  .head nav .navbar {
+    width: 100%;
+    display: none;
+  }
+  .head nav .navbar ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .head nav .navbar ul li {
+    text-align: start;
+    margin-top: 5px;
+  }
+  .head nav .navbar ul .button {
+    color: #1e3d77;
+    font-family: "vazir";
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+  }
+}
+section {
+  margin: 0 auto;
+  width: 85%;
+  height: 100vh;
+}
+section .background-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: "vazir";
+  background: linear-gradient(to right, #212750, #314577);
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid #24315f;
+  border-left: 1px solid #666986;
+  border-right: 1px solid #d7dce6;
+  border-radius: 30px;
+}
+section .background-section .title-section {
+  width: 45%;
+  margin: 0 50px;
+}
+section .background-section .paragraph-section {
+  width: 45%;
+  margin: 0 50px;
+  text-align: justify;
+  font: 300 normal 17px/1.7 "vazir";
+}
+section .background-section .btn-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 20%;
+  margin: 0 50px;
+}
+section .background-section .btn-section .sin-in {
+  font: 600 normal 12px "vazir";
+  background: linear-gradient(to right, #ffe320, #ffda02);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+section .background-section .btn-section .log-in {
+  font: 600 normal 12px "vazir";
+  background: #435a8a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
