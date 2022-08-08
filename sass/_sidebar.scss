@@ -1,0 +1,82 @@
+
+.sidebar {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 130px;
+    align-items: center;
+    margin: 0 auto;
+
+    .Description {
+
+        width: 90%;
+        margin: 0 auto;
+
+        .head {
+            font: 500 1.2rem/1.7em "vazir";
+            color: gray;
+            justify-content: start;
+        }
+
+        .title {
+            margin-top: 1rem;
+
+            h3 {
+                color: rgba(0, 0, 0, 0.8);
+                font: bold 1.7rem/1.7rem "vazir";
+            }
+        }
+
+        .paragraph {
+            width: 90%;
+            margin-top: 1rem;
+            text-align: justify;
+
+            p {
+                color: rgba(0, 0, 0, 0.7);
+                font: 500 0.9rem/2rem "vazir";
+            }
+
+            hr {
+                width: 100%;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        .button {
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: start;
+            grid-gap: 15px;
+            margin-top: 2rem;
+
+            .log {
+                background-color: rgb(255, 224, 23);
+                border: none;
+                border-radius: 15px;
+                padding: 3px 10px;
+                font: 400 0.8rem/1.7rem "vazir";
+            }
+
+            .exit {
+                background-color: rgb(239, 244, 253);
+                color: rgb(40, 69, 123);
+                border: none;
+                border-radius: 15px;
+                padding: 3px 10px;
+                font: 400 0.8rem/1.7rem "vazir";
+            }
+        }
+    }
+
+    .Description-image {
+        width: 80%;
+        height: 300px;
+        margin: 10PX auto;
+        background-color: #333;
+        color: white;
+        border-radius: 3px;
+        padding: 30px;
+    }
+}

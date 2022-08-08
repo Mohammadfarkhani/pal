@@ -1,0 +1,63 @@
+
+section {
+    margin: 0 auto 150px auto;
+    width: 85%;
+    height: 100vh;
+
+    .background-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        font-family: "vazir";
+        background: linear-gradient(to right, #212750, #314577);
+        width: 100%;
+        height: 100vh;
+        border-top: 1px solid #24315f;
+        border-left: 1px solid #666986;
+        border-right: 1px solid #d7dce6;
+        border-radius: 30px;
+
+        .title-section {
+            font: bold 1.7rem/1.7 "vazir";
+            width: 45%;
+            margin: 0 50px;
+        }
+
+        .paragraph-section {
+            margin-bottom: 30px;
+
+            p {
+                width: 45%;
+                margin: 0 50px;
+                text-align: justify;
+                font: 300 normal 17px/1.9 "vazir";
+            }
+        }
+
+        .btn-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            width: 20%;
+            margin: 0 50px;
+
+            .sin-in {
+                font: 600 normal 12px "vazir";
+                background: linear-gradient(to right, #ffe320, #ffda02);
+                border: none;
+                border-radius: 10px;
+                padding: 10px 15px;
+            }
+
+            .log-in {
+                font: 600 normal 12px "vazir";
+                background: #435a8a;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 15px;
+            }
+        }
+    }
+}
