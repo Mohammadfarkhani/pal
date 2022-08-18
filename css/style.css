@@ -69,13 +69,14 @@ table {
   position: fixed;
   width: 85%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .head nav .logo {
-  background-image: url(../image/logo.png);
+  background-image: url(../image/logo.svg);
   background-size: cover;
-  width: 145px;
-  height: 55px;
+  width: 140px;
+  height: 30px;
+  margin: 5px 15px;
 }
 .head nav .toggle-button {
   position: absolute;
@@ -90,19 +91,19 @@ table {
 .head nav .toggle-button .bar {
   width: 100%;
   height: 3px;
-  background-color: rgb(0, 0, 0);
+  background-color: #273c6e;
   border-radius: 10px;
 }
-.head nav .navbar ul {
+.head nav .navbar .one ul {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.head nav .navbar ul li {
+.head nav .navbar .one ul li {
   justify-content: center;
   text-align: center;
 }
-.head nav .navbar ul li a {
+.head nav .navbar .one ul li a {
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
   font-family: "vazir";
@@ -111,25 +112,152 @@ table {
   padding: 5px;
   margin-left: 15px;
 }
-.head nav .navbar ul .button {
+.head nav .navbar .one ul .button {
   color: #1e3d77;
   font-family: "vazir";
   font-size: 12px;
   font-weight: bold;
   margin-right: 10px;
-  background-color: rgb(0, 250, 250);
+  background-color: #f1f5fe;
   padding: 10px 20px;
   border: none;
   border-radius: 15px;
 }
-.head nav .navbar ul .button:hover {
-  background-color: burlywood;
+.head nav .navbar .one ul .button:hover {
+  background-color: #fbf7d9;
+}
+.head nav .navbar .tow ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.head nav .navbar .tow ul li {
+  justify-content: center;
+  text-align: center;
+}
+.head nav .navbar .tow ul li a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-family: "vazir";
+  font-size: 15px;
+  font: 500 normal 13px "vazir";
+  padding: 5px;
+  margin-left: 15px;
+}
+.head nav .navbar .three ul {
+  width: 95%;
+  height: 260px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  background-color: white;
+}
+.head nav .navbar .three ul li {
+  width: 100%;
+  justify-content: center;
+  text-align: start;
+  margin: 5px 10px;
+}
+.head nav .navbar .three ul li hr {
+  color: #dfe1e4;
+}
+.head nav .navbar .three ul li a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font: 400 normal 1rem "vazir";
+  padding: 5px;
+  margin-left: 15px;
+}
+.head nav .navbar .three ul span {
+  width: 100%;
+  position: relative;
+  right: -20px;
+}
+.head nav .navbar .three ul span a {
+  text-decoration: none;
+}
+.head nav .navbar .three ul span .button {
+  width: 100%;
+  background-color: #eeeeee;
+  height: 30px;
+  padding: 10px 35px;
+  display: flex;
+  align-items: center;
+  color: #1e3d77;
+  font-family: "vazir";
+  font-size: 15px;
+  font-weight: 500;
+}
+.head nav .navbar .three ul span .button h5 {
+  margin: 0 0 0 20px;
+}
+.head nav .navbar .three ul span .button span {
+  width: 12px;
+  height: 12px;
+  margin: 10px 10px;
+  background-image: url(../image/arrow-left.svg);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1200px) {
+  .head {
+    width: 100%;
+  }
   .head nav {
+    width: 1170px;
+  }
+  .head nav .navbar .one {
+    display: block;
+  }
+  .head nav .navbar .tow {
+    display: none;
+  }
+  .head nav .navbar .three {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .head {
+    width: 100%;
+  }
+  .head nav {
+    width: 940px;
+  }
+  .head nav .navbar .one {
+    display: block;
+  }
+  .head nav .navbar .tow {
+    display: none;
+  }
+  .head nav .navbar .three {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .head {
+    width: 100%;
+  }
+  .head nav {
+    width: 90%;
+  }
+  .head nav .navbar .one {
+    display: none;
+  }
+  .head nav .navbar .tow {
+    display: block;
+  }
+  .head nav .navbar .three {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .head {
+    width: 100%;
+  }
+  .head nav {
+    width: 94%;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
   }
   .head nav .toggle-button {
     display: flex;
@@ -141,62 +269,521 @@ table {
     width: 100%;
     display: none;
   }
-  .head nav .navbar ul {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+  .head nav .navbar .one {
+    display: none;
   }
-  .head nav .navbar ul li {
-    text-align: start;
-    margin-top: 5px;
+  .head nav .navbar .tow {
+    display: none;
   }
-  .head nav .navbar ul .button {
-    color: #1e3d77;
-    font-family: "vazir";
-    font-size: 12px;
-    font-weight: bold;
-    margin-top: 15px;
-    padding: 10px;
+  .head nav .navbar .three {
+    display: block;
   }
 }
-footer {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+section {
+  margin: 0 auto 150px auto;
+  width: 95%;
+  height: 100%;
 }
-footer .head {
+section .background-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-family: "vazir";
+  background-image: url(../image/home.svg), url(../image/wave.svg), linear-gradient(to right, #212750, #314577);
+  background-size: 525px, 850px, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 15% center, left center, left top;
+  width: 100%;
+  height: 100vh;
+  border-top: 1px solid #24315f;
+  border-left: 1px solid #666986;
+  border-right: 1px solid #d7dce6;
   border-radius: 30px;
+}
+section .background-section .mohtava {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section .background-section .mohtava .title-section {
+  font: bold 1.7rem/1.7 "vazir";
+  margin: 0 50px;
+  width: 45%;
+}
+section .background-section .mohtava .paragraph-section {
+  margin-bottom: 30px;
+}
+section .background-section .mohtava .paragraph-section p {
+  width: 45%;
+  margin: 0 50px;
+  text-align: justify;
+  font: 300 normal 17px/1.9 "vazir";
+}
+section .background-section .mohtava .btn-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 20%;
+  margin: 0 50px;
+}
+section .background-section .mohtava .btn-section .sin-in {
+  font: 600 normal 12px "vazir";
+  background: linear-gradient(to right, #ffe320, #ffda02);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+section .background-section .mohtava .btn-section .log-in {
+  font: 600 normal 12px "vazir";
+  background: #435a8a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+section .background-section .mohtava .btn.button {
+  background-image: url(../image/);
+}
+
+@media (min-width: 1200px) {
+  section {
+    width: 98%;
+  }
+  section .background-section {
+    width: 1170px;
+    height: 719px;
+    margin: 0 auto;
+  }
+  section .background-section .mohtava {
+    justify-content: start;
+    margin: 75px 10px;
+  }
+  section .background-section .mohtava .title-section {
+    margin: 25px 50px;
+  }
+  section .background-section .mohtava .paragraph-section p {
+    font: 300 normal 17px/2 "vazir";
+  }
+}
+@media (max-width: 1200px) {
+  section {
+    width: 95%;
+    align-items: center;
+  }
+  section .background-section {
+    width: 940px;
+    height: 670px;
+    background-image: url(../image/home.svg), url(../image/wave.svg), linear-gradient(to right, #212750, #314577);
+    background-size: 440px, 850px, 100%;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: 14% 35%, left center, left top;
+    margin: 0 auto;
+  }
+  section .background-section .mohtava {
+    justify-content: start;
+    margin: 35PX auto;
+  }
+  section .background-section .mohtava .paragraph-section p {
+    width: 40%;
+    font: 700 normal 14.3px/2.3rem "vazir";
+    margin: 20px 50px;
+  }
+}
+@media (max-width: 992px) {
+  section {
+    width: 95%;
+  }
+  section .background-section {
+    width: 95%;
+    background-image: linear-gradient(to right, #212750, #314577);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 400px;
+    border-radius: 20px;
+  }
+  section .background-section .mohtava .title-section {
+    font-weight: bold;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  section .background-section .mohtava .paragraph-section p {
+    width: 85%;
+    margin: auto;
+    font: 700 normal 14.3px/2.3rem "vazir";
+    text-align: center;
+  }
+  section .background-section .mohtava .btn-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    margin: 0 auto 50px auto;
+  }
+  section .background-section {
+    background-image: linear-gradient(to right, #212750, #314577);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 465px;
+    border-radius: 20px;
+  }
+  section .background-section .mohtava .title-section {
+    font-weight: bold;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  section .background-section .mohtava .paragraph-section p {
+    width: 85%;
+    margin: auto;
+    font: 700 normal 14.2px/2.3rem "vazir";
+    text-align: center;
+  }
+  section .background-section .mohtava .btn-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+  }
+}
+@media (max-width: 575px) {
+  section {
+    width: 95%;
+  }
+  section .background-section {
+    background-image: linear-gradient(to right, #212750, #314577);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 510px;
+    border-radius: 20px;
+  }
+  section .background-section .mohtava .title-section {
+    width: 100%;
+    margin: 0px 50px 0 0;
+    text-align: start;
+  }
+  section .background-section .mohtava .title-section h2 {
+    font: 500 1.2rem/1.7 "vazir";
+    width: 100%;
+  }
+  section .background-section .mohtava .paragraph-section p {
+    width: 75%;
+    margin: 10px 50px;
+    height: max-content;
+    text-align: center;
+    font-size: 14px;
+  }
+  section .background-section .mohtava .btn-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+  }
+}
+.sidebar {
   width: 85%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 130px;
+  align-items: center;
   margin: 0 auto;
-  padding: 30px;
 }
-footer .head h2 {
-  font: 700 normal 1.5rem "vazir";
-  margin: 5px 0 10px 0;
+.sidebar .Description {
+  width: 90%;
+  margin: 0 auto;
 }
-footer .head h3 {
-  font: 500 normal 1.1rem "vazir";
-  color: rgba(0, 0, 0, 0.5);
-  margin: 5px 0 10px 0;
+.sidebar .Description .head {
+  font: 500 1.2rem/1.7em "vazir";
+  color: gray;
+  justify-content: start;
 }
-footer .head a .log {
-  margin: 5px 0 10px 0;
+.sidebar .Description .title {
+  display: flex;
+  margin-top: 1rem;
+}
+.sidebar .Description .title h3 {
+  color: rgba(0, 0, 0, 0.8);
+  font: bold 1.7rem/1.7rem "vazir";
+}
+.sidebar .Description .paragraph {
+  width: 90%;
+  margin-top: 1rem;
+  text-align: justify;
+}
+.sidebar .Description .paragraph p {
+  color: rgba(0, 0, 0, 0.7);
+  font: 500 0.9rem/2rem "vazir";
+}
+.sidebar .Description .paragraph hr {
+  width: 100%;
+  color: #dfe1e4;
+}
+.sidebar .Description .button {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  grid-gap: 15px;
+  margin-top: 2rem;
+  align-items: center;
+}
+.sidebar .Description .button a {
+  text-decoration: none;
+}
+.sidebar .Description .button .log {
   background-color: rgb(255, 224, 23);
   border: none;
   border-radius: 15px;
   padding: 3px 10px;
   font: 400 0.8rem/1.7rem "vazir";
 }
+.sidebar .Description .button .exit {
+  background-color: rgb(239, 244, 253);
+  color: rgb(40, 69, 123);
+  border: none;
+  border-radius: 15px;
+  padding: 3px 10px;
+  font: 400 0.8rem/1.7rem "vazir";
+  align-items: center;
+  display: flex;
+}
+.sidebar .Description .button .exit span {
+  width: 12px;
+  height: 12px;
+  margin: 10px 10px;
+  background-image: url(../image/arrow-left.svg);
+}
+.sidebar .Description-image-on {
+  width: 80%;
+  height: 400px;
+  margin: 10PX auto;
+  background-image: url(../image/pg.svg);
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 3px;
+  padding: 30px;
+}
+.sidebar .Description-image-tow {
+  width: 80%;
+  height: 400px;
+  margin: 10PX auto;
+  background-image: url(../image/social-image.svg);
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 3px;
+  padding: 30px;
+}
+.sidebar .Description-image-three {
+  width: 70%;
+  height: 200px;
+  background-image: url(../image/zarincard\ .svg);
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 3px;
+  padding: 30px;
+}
+.sidebar .Description-image-four {
+  width: 80%;
+  height: 400px;
+  background-image: url(../image/payout.svg);
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 3px;
+  margin: 10PX auto;
+  padding: 30px;
+  position: static;
+  top: 50px;
+}
+.sidebar .Description-image-five {
+  width: 70%;
+  height: 300px;
+  margin: 10PX auto;
+  background-image: url(../image/zarinplus.svg);
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 3px;
+  padding: 30px;
+}
 
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 1170px;
+  }
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 940px;
+    grid-row-gap: 45px;
+  }
+  .sidebar .Description .button {
+    display: flex;
+  }
+  .sidebar .Description-image-three {
+    width: 400px;
+  }
+  .sidebar .Description-image-four {
+    background-size: cover;
+  }
+  .sidebar .Description-image-five {
+    width: 80%;
+  }
+}
+@media (max-width: 992px) {
+  .sidebar {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 0px;
+  }
+  .sidebar .Description {
+    margin: 20px auto;
+  }
+  .sidebar .Description .head {
+    font: 500 1.6rem/1.7em "vazir";
+  }
+  .sidebar .Description .paragraph {
+    width: 100%;
+  }
+  .sidebar .Description .button {
+    display: flex;
+    flex-direction: row;
+  }
+  .sidebar .Description-image-on {
+    width: 410px;
+  }
+  .sidebar .Description-image-tow {
+    width: 410px;
+  }
+  .sidebar .Description-image-three {
+    width: 350px;
+  }
+  .sidebar .Description-image-four {
+    width: 485px;
+    margin: 10PX 0px 0px 60px;
+  }
+  .sidebar .Description-image-five {
+    width: 410px;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 0px;
+  }
+  .sidebar .Description {
+    margin: 15px auto;
+  }
+  .sidebar .Description .head {
+    justify-content: center;
+  }
+  .sidebar .Description .head h4 {
+    font: 500 1.5rem/1.7em "vazir";
+  }
+  .sidebar .Description .title {
+    justify-content: center;
+  }
+  .sidebar .Description .paragraph {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: justify;
+  }
+  .sidebar .Description .paragraph p {
+    font: 400 0.9rem/2rem "vazir";
+  }
+  .sidebar .Description .button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .sidebar .Description-image-on {
+    width: 463px;
+    height: 436px;
+  }
+  .sidebar .Description-image-tow {
+    display: block;
+    background-repeat: no-repeat;
+    width: 60%;
+    padding: 30px 30px 0px;
+    margin: 10px auto 0;
+  }
+  .sidebar .Description-image-three {
+    display: block;
+    width: 355px;
+    height: 225px;
+  }
+  .sidebar .Description-image-four {
+    display: none;
+  }
+  .sidebar .Description-image-five {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .sidebar {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0px;
+  }
+  .sidebar .Description .head {
+    font: 500 1.4rem/1.7em "vazir";
+    justify-content: center;
+  }
+  .sidebar .Description .title {
+    justify-content: start;
+  }
+  .sidebar .Description .title h3 {
+    font: bold 1.4rem/1.7rem "vazir";
+  }
+  .sidebar .Description .paragraph {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: justify;
+  }
+  .sidebar .Description .paragraph p {
+    font: 400 0.9rem/2rem "vazir";
+  }
+  .sidebar .Description .button {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .sidebar .Description-image-on {
+    display: none;
+  }
+  .sidebar .Description-image-tow {
+    display: none;
+  }
+  .sidebar .Description-image-three {
+    display: none;
+  }
+  .sidebar .Description-image-four {
+    display: none;
+  }
+  .sidebar .Description-image-five {
+    display: none;
+  }
+}
 .content {
   width: 85%;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 .content .property {
   width: 33%;
@@ -231,12 +818,37 @@ footer .head a .log {
   align-items: center;
   margin: 10px 0 10px 0;
 }
-.content .propertys .item .hed span {
+.content .propertys .item .hed .image-one {
   display: flex;
   width: 50px;
   height: 50px;
-  background-color: #24315f;
+  background-image: url(../image/verifiedIcon.svg);
   margin: 5px 7px;
+  background-repeat: no-repeat;
+}
+.content .propertys .item .hed .image-tow {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-image: url(../image/splite.svg);
+  margin: 5px 7px;
+  background-repeat: no-repeat;
+}
+.content .propertys .item .hed .image-three {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-image: url(../image/support.svg);
+  margin: 5px 7px;
+  background-repeat: no-repeat;
+}
+.content .propertys .item .hed .image-four {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-image: url(../image/support.svg);
+  margin: 5px 7px;
+  background-repeat: no-repeat;
 }
 .content .propertys .item .hed .header {
   margin: 5px 7px;
@@ -249,77 +861,420 @@ footer .head a .log {
   width: 75%;
   text-align: justify;
   margin: 15px 0 15px 0;
-  font: 400 normal 0.8rem/1.5rem "vazir";
+  font: 400 normal 1rem/1.6rem "vazir";
 }
 
-.sidebar {
-  width: 85%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 130px;
+@media (min-width: 1200px) {
+  .content {
+    width: 1170px;
+  }
+  .content .property p {
+    line-height: 2.2rem;
+    width: 80%;
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    width: 90%;
+    flex-direction: column;
+  }
+  .content .property {
+    width: 940px;
+    margin: 0 auto;
+  }
+  .content .property h4 {
+    margin: 45px auto;
+  }
+  .content .property p {
+    width: 100%;
+  }
+  .content .propertys {
+    width: 940px;
+    margin: 65px auto;
+    grid-template-columns: repeat(2, 430px);
+  }
+}
+@media (max-width: 992px) {
+  .content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content .property {
+    width: 100%;
+  }
+  .content .property h4 {
+    margin: 40px auto;
+  }
+  .content .propertys {
+    display: grid;
+    grid-template-columns: repeat(2, 315px);
+    grid-column-gap: 15px;
+    width: 100%;
+    justify-content: start;
+  }
+  .content .propertys .item p {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content .property {
+    margin: 100px auto;
+    width: 90%;
+    text-align: center;
+  }
+  .content .property h4 {
+    margin: 25px 0;
+  }
+  .content .property p {
+    width: 95%;
+    margin: 0 auto;
+    font: 500 0.9rem/2.5rem "vazir";
+  }
+  .content .propertys {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px auto;
+    width: 100%;
+  }
+  .content .propertys .item p {
+    width: 95%;
+  }
+}
+@media (max-width: 575px) {
+  .content {
+    width: 90%;
+    flex-direction: column;
+  }
+  .content .property {
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+  }
+  .content .property h4 {
+    font-size: 1.5rem;
+    margin: 25px 0;
+  }
+  .content .property p {
+    width: 95%;
+    margin: 0 auto;
+    font: 500 0.9rem/2.5rem "vazir";
+  }
+  .content .propertys {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .content .propertys .item {
+    width: 317px;
+    margin: 20px auto;
+  }
+  .content .propertys .item p {
+    width: 317px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+footer .top {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  width: 1170px;
   margin: 0 auto;
+  padding: 30px 0 30px 0;
 }
-.sidebar .Description {
-  width: 90%;
-  margin: 0 auto;
+footer .top h2 {
+  font: 700 normal 1.5rem "vazir";
+  margin: 5px 0 10px 0;
 }
-.sidebar .Description .head {
-  font: 500 1.2rem/1.7em "vazir";
-  color: gray;
-  justify-content: start;
+footer .top h3 {
+  font: 500 normal 1.1rem "vazir";
+  color: rgba(0, 0, 0, 0.5);
+  margin: 5px 0 10px 0;
 }
-.sidebar .Description .title {
-  margin-top: 1rem;
-}
-.sidebar .Description .title h3 {
-  color: rgba(0, 0, 0, 0.8);
-  font: bold 1.7rem/1.7rem "vazir";
-}
-.sidebar .Description .paragraph {
-  width: 90%;
-  margin-top: 1rem;
-  text-align: justify;
-}
-.sidebar .Description .paragraph p {
-  color: rgba(0, 0, 0, 0.7);
-  font: 500 0.9rem/2rem "vazir";
-}
-.sidebar .Description .paragraph hr {
-  width: 100%;
-  color: rgba(0, 0, 0, 0.6);
-}
-.sidebar .Description .button {
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: start;
-  grid-gap: 15px;
-  margin-top: 2rem;
-}
-.sidebar .Description .button .log {
+footer .top a .log {
+  margin: 5px 0 10px 0;
   background-color: rgb(255, 224, 23);
   border: none;
   border-radius: 15px;
   padding: 3px 10px;
   font: 400 0.8rem/1.7rem "vazir";
 }
-.sidebar .Description .button .exit {
-  background-color: rgb(239, 244, 253);
-  color: rgb(40, 69, 123);
-  border: none;
-  border-radius: 15px;
-  padding: 3px 10px;
-  font: 400 0.8rem/1.7rem "vazir";
+footer .middle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fbf6f1;
+  border-radius: 50px;
+  padding: 20px 0 20px 0;
+  font: 800 normal 1.3rem/1.5rem "vazir";
+  width: 1170px;
+  margin: 50px auto 50px;
+  align-items: center;
 }
-.sidebar .Description-image {
-  width: 80%;
-  height: 300px;
-  margin: 10PX auto;
-  background-color: #333;
-  color: white;
-  border-radius: 3px;
-  padding: 30px;
+footer .middle .right {
+  display: grid;
+  grid-template-columns: 250px 55px 250px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #303030;
+  margin: 0 30px;
+}
+footer .middle .right .paip {
+  margin: 0 15px;
+}
+footer .middle .right .inf-l {
+  display: flex;
+  flex-direction: row;
+}
+footer .middle .right .inf-l .number {
+  color: #21457f;
+}
+footer .middle .left {
+  display: flex;
+  flex-direction: row;
+  color: #21457f;
+  margin: 0 30px;
+}
+footer .middle .left span {
+  width: 12px;
+  height: 12px;
+  margin: 10px 10px;
+  background-image: url(../image/arrow-left.svg);
+}
+footer .bottom {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  margin: 0 auto;
+}
+footer .bottom .infLink {
+  display: grid;
+  grid-template-columns: 195px 195px 195px 195px 368px;
+  margin: 0 auto;
+}
+footer .bottom .infLink .column .headLink-up {
+  color: #21457f;
+}
+footer .bottom .infLink .column .headLink-up a {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #303030;
+}
+footer .bottom .infLink .column .headLink-up ul {
+  margin: 40px 0;
+}
+footer .bottom .infLink .column .headLink-up ul li {
+  margin: 25px 0;
+}
+footer .bottom .infLink .column .headLink-up ul li a {
+  font-weight: 400;
+  font-size: 1rem;
+}
+footer .bottom .infLink .column-icons .headLink-up .links {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #303030;
+}
+footer .bottom .infLink .column-icons .headLink-up .row {
+  display: flex;
+  flex-direction: row;
+  margin: 25px 0;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share {
+  width: 44px;
+  height: 44px;
+  margin: 0 15px 0 0;
+  background-color: #eff4fe;
+  border-radius: 15px;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share a:hover {
+  background-color: white;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share .insta {
+  width: 22px;
+  height: 22px;
+  background-image: url(../image/instagram.svg);
+  background-size: cover;
+  margin: 10px auto;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share .twitter {
+  width: 25px;
+  height: 20px;
+  background-image: url(../image/twitter.svg);
+  background-size: cover;
+  margin: 10px auto;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share .telegram {
+  width: 25px;
+  height: 23px;
+  background-image: url(../image/telegram.svg);
+  background-size: cover;
+  margin: 10px auto;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share .linkedin {
+  width: 25px;
+  height: 20px;
+  background-image: url(../image/linkedin.svg);
+  background-size: cover;
+  margin: 10px auto;
+}
+footer .bottom .infLink .column-icons .headLink-up .row .icone-share .aparat {
+  width: 25px;
+  height: 25px;
+  background-image: url(../image/aparat.svg);
+  background-size: cover;
+  margin: 10px auto;
+}
+
+.end {
+  display: flex;
+  margin: 20px auto 80px;
+}
+
+@media (min-width: 1200px) {
+  footer .top {
+    width: 1170px;
+  }
+  footer .middle {
+    width: 1170px;
+  }
+  footer .bottom {
+    width: 1170px;
+  }
+}
+@media (max-width: 1200px) {
+  footer .top {
+    width: 938px;
+  }
+  footer .middle {
+    width: 938px;
+  }
+  footer .bottom {
+    width: 938px;
+  }
+  footer .bottom .infLink {
+    grid-template-columns: 156px 156px 156px 156px 313px;
+  }
+}
+@media (max-width: 992px) {
+  footer .top {
+    width: 95%;
+  }
+  footer .middle {
+    width: 90%;
+    font: 800 normal 1rem/2rem "vazir";
+    padding: 15px 25px;
+  }
+  footer .middle .right {
+    display: flex;
+    flex-direction: row;
+    width: 510px;
+    justify-content: start;
+  }
+  footer .middle .left {
+    justify-content: end;
+    width: 255px;
+    margin: 0;
+  }
+  footer .bottom {
+    width: 95%;
+  }
+  footer .bottom .infLink {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 196px, 194px;
+  }
+}
+@media (max-width: 767px) {
+  footer .middle {
+    width: 90%;
+    background-color: white;
+    align-items: start;
+    flex-direction: column;
+  }
+  footer .middle .right {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: start;
+  }
+  footer .middle .left {
+    background-color: #fbf6f1;
+    align-items: center;
+    padding: 5px 15px 5px 5px;
+    border-radius: 30px;
+    margin: 15px 20px;
+    width: 155px;
+    justify-content: start;
+  }
+  footer .bottom .infLink {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 223px 223px 194px;
+  }
+}
+@media (max-width: 575px) {
+  footer .top h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  footer .top h3 {
+    font-size: 0.9rem;
+  }
+  footer .middle {
+    background-color: white;
+    align-items: start;
+    flex-direction: column;
+    font: 600 normal 0.8rem/2.3rem "vazir";
+  }
+  footer .middle .right {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .middle .right .paip {
+    display: none;
+  }
+  footer .middle .left {
+    background-color: #fbf6f1;
+    align-items: center;
+    padding: 0 15px 0 5px;
+    border-radius: 30px;
+    margin: 15px 20px;
+    width: 130px;
+  }
+  footer .bottom {
+    width: 85%;
+  }
+  footer .bottom .infLink .column .headLink-up {
+    margin: 0 auto;
+  }
+  footer .bottom .infLink .column .headLink-up ul li a {
+    font-size: 15px;
+  }
+  footer .bottom .infLink .column .headLink-up a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #303030;
+  }
+  footer .bottom .infLink .column-icons .headLink-up .row .icone-share {
+    margin: 0 10px 0 0;
+  }
+  footer .bottom .infLink .column-icons .headLink-up .links {
+    font-size: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,37 +1,337 @@
-
-footer {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    
-    .head {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1px solid rgba(0, 0, 0, 0.3);
-        border-radius: 30px;
-        width: 85%;
-        margin: 0 auto;
-        padding: 30px;
-        h2 {
-            font:700 normal 1.5rem "vazir";
-            margin: 5px 0 10px 0;
-        }
-        h3 {
-            font: 500 normal 1.1rem "vazir";
-            color: rgba(0, 0, 0, 0.5);
-            margin: 5px 0 10px 0;
-            
-        }
-        a {
-            .log {
-                margin: 5px 0 10px 0;
-                background-color: rgb(255, 224, 23);
-                border: none;
-                border-radius: 15px;
-                padding: 3px 10px;
-                font: 400 0.8rem/1.7rem "vazir";
-            }
-        }
-    }
-}
+                                    footer {
+                                        display: flex;
+                                        flex-direction: column;
+                                        margin: 0 auto;
+                                        .top {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            border: 1px solid rgba(0, 0, 0, 0.3);
+                                            border-radius: 30px;
+                                            width: 1170px;
+                                            margin: 0 auto;
+                                            padding: 30px 0 30px 0;
+                                            h2 {
+                                                font: 700 normal 1.5rem "vazir";
+                                                margin: 5px 0 10px 0;
+                                            }
+                                            h3 {
+                                                font: 500 normal 1.1rem "vazir";
+                                                color: rgba(0, 0, 0, 0.5);
+                                                margin: 5px 0 10px 0;
+                                            }
+                                            a {
+                                                .log {
+                                                    margin: 5px 0 10px 0;
+                                                    background-color: rgb(255, 224, 23);
+                                                    border: none;
+                                                    border-radius: 15px;
+                                                    padding: 3px 10px;
+                                                    font: 400 0.8rem/1.7rem "vazir";
+                                                }
+                                            }
+                                        }
+                                        .middle {
+                                            display: flex;
+                                            flex-direction: row;
+                                            justify-content: space-between;
+                                            background-color: #fbf6f1;
+                                            border-radius: 50px;
+                                            padding: 20px 0 20px 0;
+                                            font: 800 normal 1.3rem/1.5rem "vazir";
+                                            width: 1170px;
+                                            margin: 50px auto 50px;
+                                            align-items: center;
+                                            .right {
+                                                display: grid;
+                                                grid-template-columns: 250px 55px 250px;
+                                                flex-direction: row;
+                                                justify-content: space-between;
+                                                align-items: flex-start;
+                                                color: #303030;
+                                                margin: 0 30px;
+                                                .paip {
+                                                    margin: 0 15px;
+                                                }
+                                                .inf-l {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    .number {
+                                                        color: #21457f;
+                                                    }
+                                                }
+                                            }
+                                            .left {
+                                                display: flex;
+                                                flex-direction: row;
+                                                color: #21457f;
+                                                margin: 0 30px;
+                                                span {
+                                                    width: 12px;
+                                                    height: 12px;
+                                                    margin: 10px 10px;
+                                                    background-image: url(../image/arrow-left.svg);
+                                                }
+                                            }
+                                        }
+                                        .bottom {
+                                            display: flex;
+                                            flex-direction: row;
+                                            width: 85%;
+                                            margin: 0 auto;
+                                            .infLink {
+                                                display: grid;
+                                                grid-template-columns: 195px 195px 195px 195px 368px;
+                                                margin: 0 auto;
+                                                .column {
+                                                    .headLink-up {
+                                                        color: #21457f;
+                                                        a {
+                                                            font-weight: 700;
+                                                            font-size: 1.2rem;
+                                                            text-decoration: none;
+                                                            color: #303030;
+                                                        }
+                                                        ul {
+                                                            margin: 40px 0;
+                                                            li {
+                                                                margin: 25px 0;
+                                                                a {
+                                                                    font-weight: 400;
+                                                                    font-size: 1rem;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .column-icons {
+                                                    .headLink-up {
+                                                        .links {
+                                                            font-weight: 700;
+                                                            font-size: 1.2rem;
+                                                            text-decoration: none;
+                                                            color: #303030;
+                                                        }
+                                                        .row {
+                                                            display: flex;
+                                                            flex-direction: row;
+                                                            margin: 25px 0;
+                                                            .icone-share {
+                                                                width: 44px;
+                                                                height: 44px;
+                                                                margin: 0 15px 0 0;
+                                                                background-color: #eff4fe;
+                                                                border-radius: 15px;
+                                                                a:hover {
+                                                                    background-color: white;
+                                                                }
+                                                                .insta {
+                                                                    width: 22px;
+                                                                    height: 22px;
+                                                                    background-image: url(../image/instagram.svg);
+                                                                    background-size: cover;
+                                                                    margin: 10px auto;
+                                                                }
+                                                                .twitter {
+                                                                    width: 25px;
+                                                                    height: 20px;
+                                                                    background-image: url(../image/twitter.svg);
+                                                                    background-size: cover;
+                                                                    margin: 10px auto;
+                                                                }
+                                                                .telegram {
+                                                                    width: 25px;
+                                                                    height: 23px;
+                                                                    background-image: url(../image/telegram.svg);
+                                                                    background-size: cover;
+                                                                    margin: 10px auto;
+                                                                }
+                                                                .linkedin {
+                                                                    width: 25px;
+                                                                    height: 20px;
+                                                                    background-image: url(../image/linkedin.svg);
+                                                                    background-size: cover;
+                                                                    margin: 10px auto;
+                                                                }
+                                                                .aparat {
+                                                                    width: 25px;
+                                                                    height: 25px;
+                                                                    background-image: url(../image/aparat.svg);
+                                                                    background-size: cover;
+                                                                    margin: 10px auto;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    .end {
+                                        display: flex;
+                                        margin: 20px auto 80px;
+                                    }
+                                    
+                                    @media (min-width: 1200px) {
+                                        footer {
+                                            .top {
+                                                width: 1170px;
+                                            }
+                                            .middle {
+                                                width: 1170px;
+                                            }
+                                            .bottom {
+                                                width: 1170px;
+                                            }
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 1200px) {
+                                        footer {
+                                            .top {
+                                                width: 938px;
+                                            }
+                                            .middle {
+                                                width: 938px;
+                                            }
+                                            .bottom {
+                                                width: 938px;
+                                                .infLink {
+                                                    grid-template-columns: 156px 156px 156px 156px 313px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 992px) {
+                                        footer {
+                                            .top {
+                                                width: 95%;
+                                            }
+                                            .middle {
+                                                width: 90%;
+                                                font: 800 normal 1rem/2rem "vazir";
+                                                padding: 15px 25px;
+                                                .right {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    width: 510px;
+                                                    justify-content: start;
+                                                }
+                                                .left {
+                                                    justify-content: end;
+                                                    width: 255px;
+                                                    margin: 0;
+                                                }
+                                            }
+                                            .bottom {
+                                                width: 95%;
+                                                .infLink {
+                                                    grid-template-columns: repeat(4, 1fr);
+                                                    grid-template-rows: 196px, 194px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 767px) {
+                                        footer {
+                                            .middle {
+                                                width: 90%;
+                                                background-color: white;
+                                                align-items: start;
+                                                flex-direction: column;
+                                                .right {
+                                                    display: flex;
+                                                    flex-direction: row;
+                                                    width: 100%;
+                                                    justify-content: start;
+                                                }
+                                                .left {
+                                                    background-color: #fbf6f1;
+                                                    align-items: center;
+                                                    padding: 5px 15px 5px 5px;
+                                                    border-radius: 30px;
+                                                    margin: 15px 20px;
+                                                    width: 155px;
+                                                    justify-content: start;
+                                                }
+                                            }
+                                            .bottom {
+                                                .infLink {
+                                                    grid-template-columns: repeat(2, 1fr);
+                                                    grid-template-rows: 223px 223px 194px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    @media (max-width: 575px) {
+                                        footer {
+                                            .top {
+                                                h2 {
+                                                    font-size: 1.2rem;
+                                                    font-weight: 500;
+                                                }
+                                                h3 {
+                                                    font-size: 0.9rem;
+                                                }
+                                            }
+                                            .middle {
+                                                background-color: white;
+                                                align-items: start;
+                                                flex-direction: column;
+                                                font: 600 normal 0.8rem/2.3rem "vazir";
+                                                .right {
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    .paip {
+                                                        display: none;
+                                                    }
+                                                }
+                                                .left {
+                                                    background-color: #fbf6f1;
+                                                    align-items: center;
+                                                    padding: 0 15px 0 5px;
+                                                    border-radius: 30px;
+                                                    margin: 15px 20px;
+                                                    width: 130px;
+                                                }
+                                            }
+                                            .bottom {
+                                                width: 85%;
+                                                .infLink {
+                                                    .column {
+                                                        .headLink-up {
+                                                            ul {
+                                                                li {
+                                                                    a {
+                                                                        font-size: 15px;
+                                                                    }
+                                                                }
+                                                            }
+                                                            margin: 0 auto;
+                                                            a {
+                                                                font-size: 1rem;
+                                                                text-decoration: none;
+                                                                color: #303030;
+                                                            }
+                                                        }
+                                                    }
+                                                    .column-icons {
+                                                        .headLink-up {
+                                                            .row {
+                                                                .icone-share {
+                                                                    margin: 0 10px 0 0;
+                                                                }
+                                                            }
+                                                            .links {
+                                                                font-size: 1rem;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
